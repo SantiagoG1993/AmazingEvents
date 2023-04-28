@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming events</title>
+    <link rel="shortcut icon" href="../assets/Images/Logo Amazing Events.png" type="image/x-icon">
+    <script src="./assets/js/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="layout d-flex flex-column" >
+        <header >
+            <nav class="navbar navbar-expand-lg bg-body-secondary">
+                <div class="container-fluid col-lg-8 bg-secondary-subtle" >
+                  <a class="navbar-brand" href="../index.html"><img id="logo" src="../assets/Images/Logo Amazing Events.png" alt="logo" title="Amazing Events"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-3">
+                      <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Upcoming events</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="./PastEvents.html">Past events</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="./Contact.html" >Contact</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="./stats.html">Stats</a>
+                      </li>
+                    </ul>                    
+                  </div>
+                </div>
+              </nav>
+        </header>
+  <!-- carousel -->
+  <main class="d-flex flex-grow-1 flex-column align-items-center">
+    <section class="carousel_container container-fluid">
+      <div id="carouselExampleAutoplaying" class="carousel slide col-12" data-bs-ride="carousel">
+        <h1 class ="text-center">Upcoming events</h1>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://d7lju56vlbdri.cloudfront.net/var/ezwebin_site/storage/images/_aliases/img_1col/reportajes/cuando-volveremos-a-ir-a-conciertos-con-normalidad/8867610-2-esl-MX/Cuando-volveremos-a-ir-a-conciertos-con-normalidad.png" class="d-block w-100" alt="..." class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/corprensa/OW7DHZAHAJBWBFPFPC5NLOCK6U.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://content.api.news/v3/images/bin/8b5bdbc1bb1abd65be1c5f0bc302c136" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://hauntedauckland.com/site/auckland-civic-theatre/6_half-res-2/" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <!-- checkboxs -->
+    <section class="shadow p-3 mb-5 bg-body-tertiary rounded container-lg mt-3 row p-4 bg-secondary-subtle d-flex align-items-center justify-content-around ">
+      <form action="" class="d-flex gap-4 col-lg-8 justify-content-center flex-wrap  " >
+        <label for="foodFair">Food fair
+          <input  type="checkbox" name="category" id="foodFair">
+        </label>
+        <label for="museum">Museum
+          <input  type="checkbox" name="category" id="museum">
+        </label>
+        <label for="costumeParty">Costume Party
+          <input  type="checkbox" name="category" id="costumeParty">
+        </label>
+        <label for="musicConcert">Music Concert
+          <input  type="checkbox" name="category" id="musicConcert">
+        </label>
+        <label for="race">Race
+          <input  type="checkbox" name="category" id="race">
+        </label>
+        <label for="bookExchange">Book Exchange
+          <input  type="checkbox" name="category" id="bookExchange">
+        </label>
+        <label for="cinema">Let's go to the cinema
+          <input  type="checkbox" name="category" id="cinema">
+        </label>
+      </form>
+      <!-- search bar -->
+      <form class="d-flex container col col-lg-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button id="btn_search" class=" d-flex justify-content-center align-items-center btn btn-outline-success" type="submit"><img src="../assets/Images/ico/search.svg" alt=""></button>
+      </form>
+    </section>
+    <!-- cards -->
+    <section class=" cards row container d-flex justify-content-center mt-4">
+      
+      <div class="col-lg-4 col-md-7 col-12">
+        <img src="../assets/Images/Fiesta de disfraces1.jpg" class="card-img-top" alt="...">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <h2 class="text-center">Halloween Night</h2>
+          <p class="card-text text-center mt-4">Place: Room C</p>
+          <p class="card-text text-center mt-4">Price: $12</p>
+          <button type="button" class="btn btn-outline-secondary">See more</button>
+          <p class="past_event bg-success text-white p-1 rounded">Upcoming!</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-7 col-12">
+        <img src="../assets/Images/Concierto de musica1.jpg" class="card-img-top" alt="...">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <h2 class="text-center">Metallica in concert</h2>
+          <p class="card-text text-center mt-4">Place: Room A</p>
+          <p class="card-text text-center mt-4">Price: $150</p>
+          <button type="button" class="btn btn-outline-secondary">See more</button>
+          <p class="past_event bg-success text-white p-1 rounded">Upcoming!</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-7 col-12">
+        <img src="../assets/Images/Cine7.jpg" class="card-img-top" alt="...">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <h2 class="text-center">Avengers</h2>
+          <p class="card-text text-center mt-4">Place: Room D1</p>
+          <p class="card-text text-center mt-4">Price: $250</p>
+          <button type="button" class="btn btn-outline-secondary">See more</button>
+          <p class="past_event bg-success text-white p-1 rounded">Upcoming!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class=" bg-secondary d-flex align-items-center justify-content-around container-fluid ">
+    <div class="ico d-flex gap-3 " >
+      <a href="#"><img src="../assets/Images/ico/instagram.svg" alt="instagram"></a>
+      <a href="#"><img src="../assets/Images/ico/facebook.svg" alt="facebook"></a>
+      <a href="#"><img src="../assets/Images/ico/whatsapp.svg" alt="wapp"></a>
+    </div>
+
+    <h3 class="">Cohort</h3>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</div>       
+</body>
+</html>

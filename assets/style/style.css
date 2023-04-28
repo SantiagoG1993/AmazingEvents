@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.vh10{
+    min-height: 10vh;
+}
+.layout{
+    min-height: 100vh;
+
+}
+#logo{
+    width: 9rem;
+}
+section{
+    min-height: 20vh;
+}
+.carousel_container h1{
+color: white;
+font-family: 'Castoro Titling', cursive; ;
+font-size: 4rem;
+position: absolute;
+background-color: rgba(14, 8, 1, 0.13);
+z-index: 1;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+width: fit-content;
+height: fit-content;
+}
+
+.carousel-item img{
+    height: 22rem;
+    object-fit: cover;
+
+}
+li, label, .card-body>p{font-family: 'Castoro Titling', cursive;
+    font-size: .8rem;
+    transition: all .2s ease-in-out;
+}
+.card-body h2{
+    border-radius: 3%;
+    font-size: 2rem;
+    font-family: 'Bebas Neue', cursive;
+
+}
+a:hover{
+    text-decoration: underline;
+}
+/* .card{
+    height: 22rem;
+} */
+th, th, td{
+    border: 1px solid black;
+    font-family: 'Castoro Titling', cursive; ;
+}
+table{
+    box-shadow: 2px 1px 3px;
+}
+td{
+    height: 1.8rem;
+}
+th{
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.089);
+    text-decoration: underline;
+}
+
+.ico img{
+    width: 1.8rem;
+    transition: all .3s ease;
+}
+.ico img:hover{
+    width: 3rem;
+}
+footer{
+    min-height: 30vh;
+}
+label:hover{
+    background-color: rgba(0, 0, 0, 0.219);
+}
+.card:hover{
+    border: 1px solid rgb(10, 8, 8);
+}
+button[type="button"]{
+    border: none;
+    font-family: 'Castoro Titling', cursive;
+    text-decoration: underline;
+    
+}
+#btn_search{
+    border: 1px solid black;
+}
+#btn_search:hover{
+    background-color: rgba(0, 0, 0, 0.178)
+    ;
+}
+
+#message{
+    height: 8rem;
+}
+.card_details>img{   
+    object-fit: cover;
+    object-position: center;
+}
+.title_details{
+    font-family: 'Castoro Titling', cursive;
+    font-size: 1rem;
+}
+#btn_form{
+    font-family: 'Castoro Titling', cursive;
+}
+.cards img{
+box-shadow: 3px 3px 5px;
+height: 9rem;
+object-fit: cover;
+}
