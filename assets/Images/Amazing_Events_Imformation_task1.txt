@@ -1,6 +1,6 @@
  "events": [
     {
-      "_id": 1,
+      "_id": 1, *****PAST
       "image":"food_fair.jpg",
       "name": "Festival of the collectivities",
       "date": "2021-12-12",
@@ -12,7 +12,7 @@
       "price": 5
     },
     {
-      "_id": 2,
+      "_id": 2, *****PAST
       "image":"outing_to_the_museum.jpg",
       "name": "Jurassic Park",
       "date": "2022-11-02",
@@ -48,7 +48,7 @@
       "price": 150
     },
     {
-      "id": 5,
+      "id": 5, *****PAST
       "image":"marathon.jpg",
       "name": "10K for life",
       "date": "2022-03-01",
@@ -60,7 +60,7 @@
       "price": 3
     },
     {
-      "_id": 6,
+      "_id": 6, *****PAST
       "image":"books.jpg",
       "name": "School Book Fair",
       "date": "2021-10-15",
