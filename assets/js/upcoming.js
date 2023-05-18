@@ -13,9 +13,30 @@ function createCard (objeto){
     </div>
   </div>`
 }
-const upcomingFiltrados=data.events.filter((evento)=>evento.date>data.currentDate)
+/* const upcomingFiltrados=eventosNuevos.events.filter((evento)=>evento.date>data.currentDate) */
+let eventosNuevos
+let upcomingFiltrados
+fetch(`https://mindhub-xj03.onrender.com/api/amazing`)
+.then(response=>response.json())
+.then(data=>{
+  eventosNuevos=data
+  const category = eventosNuevos.events.map(evento => evento.category)
+const setCategory = new Set(category)
+const arrayCategory = Array.from(setCategory)
+const templateCategory = arrayCategory.reduce((acc, elementoActual, indice) => {
+  return acc += `<label for="${indice}">${elementoActual}
+  <input class="inputs_checkbox" type="checkbox" name="category" id="${indice}" value="${elementoActual}">
+  </label>`
+}, ``)
+containerCheckboxUpcoming.innerHTML += templateCategory
+upcomingFiltrados=eventosNuevos.events.filter((evento)=>evento.date<data.currentDate)
+createSection(upcomingFiltrados, seccionUpcoming)
 
-// funcion pintar cards
+})
+.catch(error=>console.log(error))
+
+
+
 
 function createSection(lista, dondeSeCrea) {
   let template=""
@@ -26,13 +47,7 @@ function createSection(lista, dondeSeCrea) {
   for (let evento of lista) {
    template+= createCard(evento)
   }
-  dondeSeCrea.innerHTML=template
-}
-createSection(upcomingFiltrados, seccionUpcoming)
-
-
-
-//Search bar
+  dondeSeCrea.innerHTML=template}
 
 let searchBarUpcoming=document.getElementById(`search_bar_upcoming`)
 
@@ -43,8 +58,6 @@ searchBarUpcoming.addEventListener(`input`,()=>{
 createSection(eventoFiltradoPorTitulo, seccionUpcoming)} */
 )
 
-
-// funcion filtrar por nombres
 function filtrarPorNombre(lista, busqueda){
   return lista.filter(evento=>evento.name.toLowerCase().includes(busqueda.toLowerCase()))
 }
@@ -54,17 +67,17 @@ function filtrarPorNombre(lista, busqueda){
 // checkbox
 let containerCheckboxUpcoming=document.getElementById(`container_checkbox_upcoming`)
 
-const category=upcomingFiltrados.map(evento=> evento.category)
+/* const category=upcomingFiltrados.map(evento=> evento.category) */
 /* const setCategory= new Set( category)
 const arrayCategory= Array.from(setCategory) */
 
-const templateCategory= category.reduce((acc,elementoActual,indice)=>{
+/* const templateCategory= category.reduce((acc,elementoActual,indice)=>{
   return acc+=`<label for="${indice}">${elementoActual}
   <input  type="checkbox" name="category" id="${indice}" value="${elementoActual}">
 </label>`
-},``)
+},``) */
 
-containerCheckboxUpcoming.innerHTML+=templateCategory
+/* containerCheckboxUpcoming.innerHTML+=templateCategory */
 
 
 containerCheckboxUpcoming.addEventListener(`change`, ()=>{
@@ -93,4 +106,3 @@ function doubleFilter(){
  let inputCategory=filtrarCategoria(inputFunction,checkboxChecked)
   createSection(inputCategory,seccionUpcoming)
 }
-

@@ -14,7 +14,29 @@ function createCard (objeto){
   </div>`
 }
 
-let pastFiltrados=data.events.filter((evento)=>evento.date<data.currentDate)
+
+let eventosNuevos
+
+let pastFiltrados
+fetch(`https://mindhub-xj03.onrender.com/api/amazing`)
+.then(response=>response.json())
+.then(data=>{
+  eventosNuevos=data
+  const category = eventosNuevos.events.map(evento => evento.category)
+const setCategory = new Set(category)
+const arrayCategory = Array.from(setCategory)
+const templateCategory = arrayCategory.reduce((acc, elementoActual, indice) => {
+  return acc += `<label for="${indice}">${elementoActual}
+  <input class="inputs_checkbox" type="checkbox" name="category" id="${indice}" value="${elementoActual}">
+  </label>`
+}, ``)
+containerCheckboxPast.innerHTML += templateCategory
+pastFiltrados=eventosNuevos.events.filter((evento)=>evento.date<data.currentDate)
+createSection(pastFiltrados, seccionPast)
+
+})
+.catch(error=>console.log(error))
+
 
 
 
@@ -30,8 +52,8 @@ function createSection(lista, dondeSeCrea){
     }
     dondeSeCrea.innerHTML=template
 }
-createSection(pastFiltrados, seccionPast)
-
+/* createSection(pastFiltrados, seccionPast)
+ */
 
 //Search bar
 let searchBarPast=document.getElementById("search_bar_past")
@@ -55,8 +77,8 @@ function filtrarPorNombre(lista, busqueda){
 // checkbox
 
 
-let containerCheckboxPast=document.getElementById(`container_checkbox_past`)
-const category=pastFiltrados.map(evento=> evento.category)
+ let containerCheckboxPast=document.getElementById(`container_checkbox_past`)
+/* const category=pastFiltrados.map(evento=> evento.category)
 
 const templateCategory= category.reduce((acc,elementoActual,indice)=>{
   return acc+=`<label for="${indice}">${elementoActual}
@@ -64,7 +86,7 @@ const templateCategory= category.reduce((acc,elementoActual,indice)=>{
 </label>`
 },``)
 
-containerCheckboxPast.innerHTML+=templateCategory
+containerCheckboxPast.innerHTML+=templateCategory */ 
 
 
 containerCheckboxPast.addEventListener(`change`, ()=>{
@@ -90,6 +112,6 @@ function doubleFilter(){
   let checkboxChecked = Array.from(document.querySelectorAll(`input[type="checkbox"]:checked`)).map(check => check.value)
   let inputFunction=filtrarPorNombre(pastFiltrados,searchBarPast.value)
  let inputCategory=filtrarCategoria(inputFunction,checkboxChecked)
- console.log(inputCategory)
+ 
   createSection(inputCategory,seccionPast)
 }

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stats</title>
     <link rel="shortcut icon" href="../assets/Images/Logo Amazing Events.png" type="image/x-icon">
-    <script src="./assets/js/script.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,25 +74,25 @@
           </div>
         </section>
         <!-- table -->
-        <div class="container-fluid col-md-8  d-flex flex-column justify-content-center ">
+        <div  class="container-fluid col-md-8  d-flex flex-column justify-content-center ">
               <table class="m-3">
                 <tr>
                   <th colspan="3" >Events statics</th>
                 </tr>
                 <tr>
-                  <td>Events with the highest percentage of attaendance</td>
-                  <td>Events with the lower percentage of attendance</td>
-                  <td>Events with larger capacity</td>
+                  <th>Events with the highest percentage of attaendance</th>
+                  <th>Events with the lower percentage of attendance</th>
+                  <th>Events with larger capacity</th>
                 </tr>
                 <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td id="highest_capacity"></td>
+                  <td id="lower_percentage"></td>
+                  <td id="larger_capacity"></td>
                 </tr>
               </table>
 
-              <table class="m-3">
-                <tr>
+              <div id="second_table" class="m-3">
+               <!--  <tr>
                   <th colspan="3" >Upcoming events statistics by category</th>
                 </tr>
                 <tr>
@@ -110,10 +109,11 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                </tr>
-              </table>
+                </tr> -->
+              </div>
 
-              <table class="m-3">
+              <div id="third_table" class="m-3">
+              <!-- <table class="m-3">
                 <tr>
                   <th colspan="3" >Past events statistics by category</th>
                 </tr>
@@ -142,7 +142,8 @@
                   <td></td>
                   <td></td>
                 </tr>
-              </table>
+                </table> -->
+              </div>
         </div>
     </main>
       <footer class=" bg-secondary d-flex align-items-center justify-content-around container-fluid ">
@@ -154,6 +155,7 @@
         <h3 class="">Cohort</h3>
       </footer>
     </div> 
+        <script src="../assets/js/stats.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>
