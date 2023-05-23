@@ -78,6 +78,7 @@ th{
 }
 footer{
     min-height: 25vh;
+
 }
 label{
     padding: 10px;
@@ -126,6 +127,10 @@ object-fit: cover;
     display: flex;
 
 }
+h3{
+    color: gray;
+    font-size: 1rem;
+}
 
 @media only screen and (max-width:900px){
     #contenedor_checkbox, #container_checkbox_upcoming, #container_checkbox_past{
@@ -136,6 +141,6 @@ object-fit: cover;
 @media only screen and (max-width:900px){
     label{
         font-size: 1.1rem;
-     
+
 } 
 }
